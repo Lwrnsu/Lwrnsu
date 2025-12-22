@@ -1,0 +1,115 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  margin-top: 1.5%;
+  justify-self: center;
+  display: grid;
+  grid-template-areas: 
+    'header header header'
+    'overview overview experience'
+    'stacks certifications socials'
+    'projects projects projects';
+  max-width: 70%;
+  gap: 10px;
+}
+
+#main-header {
+  grid-area: header;
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#main-header figure {
+  width: 125px;
+  aspect-ratio: 1/1;
+  margin-right: 20px;
+  background: black;
+  border-radius: 15%;
+}
+
+#main-header article {
+  width: 85%;
+}
+
+#main-header article div h1 {
+  font-size: 2rem;
+}
+
+#main-header article div a {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+#main-header article div h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+#main-header nav {
+  margin-top: 10px;
+}
+
+#main-header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+#main-header nav ul li {
+  padding: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin-right: 10px;
+  color: white;
+}
+
+#main-header nav ul li:first-child {
+  background-color: #008000;
+}
+
+#main-header nav ul li:nth-child(2) {
+  color: black;
+}
+
+#main-header nav ul li:nth-child(3) {
+  background-color: #0E76A8;
+}
+
+#main-header nav ul li:last-child {
+  margin-right: 0px;
+  background-color: black;
+}
+
+main section, main aside {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+#overview-section {
+  grid-area: overview;
+}
+
+#experience-section {
+  grid-area: experience;
+}
+
+#techstack-section {
+  grid-area: stacks;
+}
+
+#certification-section {
+  grid-area: certifications;
+}
+
+#socials-section {
+  grid-area: socials;
+}
+
+#project-section {
+  grid-area: projects;
+}
