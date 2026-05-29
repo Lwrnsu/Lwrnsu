@@ -1,0 +1,31 @@
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation__container {
+    background-color: white;
+    width: 30%;
+    padding: 12px 8px;
+    margin-top: 8px;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+.navigation__link {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation__link:hover {
+    color: black;
+    transform: translateY(-2px);
+    transition: transform 0.25s linear;
+}
+
+.active {
+    color: black;
+}
