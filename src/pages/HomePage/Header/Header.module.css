@@ -1,0 +1,58 @@
+.headerContainer {
+    background-color: #ececf2;
+    border: none;
+    border-radius: 12px;
+    width: 75vw;
+    height: 25vh;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.headerProfile {
+    height: 75%;
+    margin: 0px 24px;
+    border: none;
+    border-radius: 12px;
+}
+
+.headerInfoName {
+    color: black;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.headerInfoLocation {
+    color: #45474a;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.headerInfoLocation:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.headerInfoCareer {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 8px 0px;
+}
+
+.headerLinkContainer {
+    display: flex;
+    gap: 8px;
+}
+
+.headerLink {
+    padding: 4px 12px;
+    border: 1px solid gray;
+}
+
+.headerHighlightedLink {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}

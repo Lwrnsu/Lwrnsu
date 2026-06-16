@@ -1,12 +1,11 @@
-import { NavBar } from "./components/NavBar/NavBar"
-import { HomePage } from "./pages/HomePage/HomePage"
+import styles from './App.module.css';
+import Header from './pages/HomePage/Header/Header.jsx';
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <HomePage />
-    </>
+    <div className={styles.pageLayout}>
+      <Header />
+    </div>
   )
 }
 
