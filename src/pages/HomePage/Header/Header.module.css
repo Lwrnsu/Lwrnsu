@@ -49,6 +49,7 @@
 .headerLink {
     padding: 4px 12px;
     border: 1px solid gray;
+    background-color: white;
 }
 
 .headerHighlightedLink {

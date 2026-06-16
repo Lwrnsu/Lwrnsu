@@ -22,7 +22,7 @@ function Header() {
             <div className={styles.headerInfoContainer}>
                 <h1 className={styles.headerInfoName}>Jay Lawrence Santiago De Luna</h1>
                 <a className={styles.headerInfoLocation} href='https://maps.app.goo.gl/B7nc9z6LreuLSuuJ8' target='_blank'>Lives in Olongapo City, Philippines.</a>
-                <h2 className={styles.headerInfoCareer}>Full Stack AI Engineer.</h2>
+                <h2 className={styles.headerInfoCareer}>Aspiring Full Stack AI Engineer.</h2>
                 <ul className={styles.headerLinkContainer}>
                     <li>
                         <button className={`${styles.headerLink} ${styles.headerHighlightedLink}`}>Download CV.</button>

@@ -1,0 +1,40 @@
+.sectionTitle {
+    font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.listContainer {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.list {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.educationTitle {
+    font-family: 'Source serif 4', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.educationTitle:hover {
+    color: #bf9b30;
+}
+
+.educationInfoContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.educationCollege, .educationDate {
+    font-size: 12px;
+    font-weight: 500;
+    color: #45474a;
+}
+
