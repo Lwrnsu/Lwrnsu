@@ -42,7 +42,14 @@
 .listImg {
     height: 60%;
     width: 100%;
-    background-color: black;
+    border: none;
+    border-radius: 12px;
+}
+
+.listImgLoading {
+    height: 60%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 12px;
 }
@@ -61,7 +68,17 @@
 
 .listTitle {
     font-size: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.listTitleLoading {
+    height: 24px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 12px;
 }
 
 .listDescription {
@@ -76,6 +93,14 @@
     color: #45474a;
 }
 
+.listDescriptionLoading {
+    height: 64px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 12px;
+}
+
 .listDateContainer {
     overflow: hidden;
 }
@@ -84,4 +109,10 @@
     font-size: 12px;
     color: #45474a;
     font-weight: 500;
+}
+
+.listDateLoading {
+    height: 12px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
 }

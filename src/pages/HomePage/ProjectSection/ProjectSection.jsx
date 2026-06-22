@@ -1,44 +1,69 @@
 import styles from './ProjectSection.module.css';
 
+import useGetRepositories from '../../../hooks/useGetRepositories.js';
+
 function ProjectSection() {
+    const { status, repo, isLoading } = useGetRepositories();
+    const dateFormat = { year: "numeric", month: "long", day: "numeric" };
+    if (!isLoading) repo.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+    console.log(repo);
     return (
         <section className={styles.sectionLayout}>
-            <h3 className={styles.sectionTitle}>Projects</h3>
-            <ul className={styles.listContainer}>
-                <li className={styles.list}>
-                    <div className={styles.listImg}></div>
-                    <div className={styles.listInfoContainer}>
-                        <h4 className={styles.listTitle}>Project Title.</h4>
-                        <p className={styles.listDescription}>This is the description of the project. It contains the description that was inserted into Github Repository. Well, this sentence is just to make it overflow to check the text style.</p>
-                        <div className={styles.listDateContainer}>
-                            <h5 className={styles.listDate}>Created at: June 17, 2026</h5>
-                        <h5 className={styles.listDate}>Last update: June 17, 2026</h5>
-                        </div>
-                    </div>
-                </li>
-                <li className={styles.list}>
-                    <div className={styles.listImg}></div>
-                    <div className={styles.listInfoContainer}>
-                        <h4 className={styles.listTitle}>Project Title.</h4>
-                        <p className={styles.listDescription}>This is the description of the project. It contains the description that was inserted into Github Repository.</p>
-                        <div className={styles.listDateContainer}>
-                            <h5 className={styles.listDate}>Created at: June 17, 2026</h5>
-                            <h5 className={styles.listDate}>Last update: June 17, 2026</h5>
-                        </div>
-                    </div>
-                </li>
-                <li className={styles.list}>
-                    <div className={styles.listImg}></div>
-                    <div className={styles.listInfoContainer}>
-                        <h4 className={styles.listTitle}>Project Title.</h4>
-                        <p className={styles.listDescription}>This is the description of the project. It contains the description that was inserted into Github Repository.</p>
-                        <div className={styles.listDateContainer}>
-                            <h5 className={styles.listDate}>Created at: June 17, 2026</h5>
-                        <h5 className={styles.listDate}>Last update: June 17, 2026</h5>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <h3 className={styles.sectionTitle}>Recent Projects</h3>
+            { isLoading ?
+                <ul className={styles.listContainer}>
+                    <li className={styles.list}>
+                        <div className={styles.listImgLoading}></div>
+                            <div className={styles.listInfoContainer}>
+                                <h4 className={styles.listTitleLoading}></h4>
+                                <p className={styles.listDescriptionLoading}></p>
+                                <div className={styles.listDateContainer}>
+                                    <h5 className={styles.listDateLoading}></h5>
+                                    <h5 className={styles.listDateLoading}></h5>
+                                </div>
+                            </div>
+                    </li>
+                    <li className={styles.list}>
+                        <div className={styles.listImgLoading}></div>
+                            <div className={styles.listInfoContainer}>
+                                <h4 className={styles.listTitleLoading}></h4>
+                                <p className={styles.listDescriptionLoading}></p>
+                                <div className={styles.listDateContainer}>
+                                    <h5 className={styles.listDateLoading}></h5>
+                                    <h5 className={styles.listDateLoading}></h5>
+                                </div>
+                            </div>
+                    </li>
+                    <li className={styles.list}>
+                        <div className={styles.listImgLoading}></div>
+                            <div className={styles.listInfoContainer}>
+                                <h4 className={styles.listTitleLoading}></h4>
+                                <p className={styles.listDescriptionLoading}></p>
+                                <div className={styles.listDateContainer}>
+                                    <h5 className={styles.listDateLoading}></h5>
+                                    <h5 className={styles.listDateLoading}></h5>
+                                </div>
+                            </div>
+                    </li>
+                </ul> :
+                <ul className={styles.listContainer}>
+                    {
+                        repo.slice(0, 3).map((e, index) => 
+                        <li className={styles.list} key={index}>
+                            <img className={styles.listImg} src={e.owner.avatar_url}/>
+                            <div className={styles.listInfoContainer}>
+                                <h4 className={styles.listTitle}>{e.name}</h4>
+                                <p className={styles.listDescription}>{e.description ? e.description : "No description available."}</p>
+                                <div className={styles.listDateContainer}>
+                                    <h5 className={styles.listDate}>Created at: {new Date(e.created_at).toLocaleDateString('en-US', dateFormat)}</h5>
+                                    <h5 className={styles.listDate}>Last update: {new Date(e.updated_at).toLocaleDateString('en-US', dateFormat)}</h5>
+                                </div>
+                            </div>
+                        </li>
+                    )
+                    }
+                </ul>
+            }
         </section>
     )
 }
