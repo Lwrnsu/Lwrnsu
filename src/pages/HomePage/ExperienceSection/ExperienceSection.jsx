@@ -1,5 +1,5 @@
 import styles from '../../../components/ListStyle.module.css';
-
+//TO BE IMPROVE: USE JSON FILE??? OR JS FILE WITH ARRAY AND OBJECT TO MAKE THIS EASY TO ADD DATA.
 function ExperienceSection() {
     return (
         <section>

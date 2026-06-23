@@ -1,5 +1,5 @@
 import styles from '../../../components/ListStyle.module.css';
-
+//TO BE IMPROVE: USE JSON FILE??? OR JS FILE WITH ARRAY AND OBJECT TO MAKE THIS EASY TO ADD DATA.
 function EducationSection() {
     return (
         <section>
@@ -9,7 +9,7 @@ function EducationSection() {
                     <h4 className={styles.listTitle}>BS in Computer Science</h4>
                     <div className={styles.listInfoContainer}>
                         <h5 className={styles.listOrganization}>GORDON COLLEGE</h5>
-                        <h5 className={styles.listDate}>August 2025 - Expected: May 2028</h5>
+                        <h5 className={styles.listDate}>August 2025 - Expected: May 2029</h5>
                     </div>
                 </li>
                 <li className={styles.list}>

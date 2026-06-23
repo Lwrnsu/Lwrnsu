@@ -14,6 +14,6 @@ async function getRepositories() {
     } catch (err) {
         throw new Error(err.message, { cause: err });
     }
-} 
+}
 
 export default getRepositories;
