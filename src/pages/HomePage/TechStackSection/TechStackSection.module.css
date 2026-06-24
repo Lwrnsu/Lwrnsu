@@ -1,0 +1,44 @@
+.sectionTitle {
+    font-size: 24px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.sectionContentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.sectionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sectionContentTitle {
+    font-family: 'Source serif 4', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.list {
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #45474a;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.list:first-child {
+    margin-left: 24px;
+}
